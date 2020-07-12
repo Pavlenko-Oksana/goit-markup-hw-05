@@ -12,6 +12,7 @@
 --secondary-background-color:#F5F4FA;
 --footer-background-color:#2F303A;
 --accent-color:#2196F3;
+--accent-color-hover:#188CE8;
 --accent-color-white:#FFFFFF;
 --customers-logo: #AFB1B8;
 --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -87,7 +88,11 @@ letter-spacing: 0.06em;
 margin-right: auto;
 margin-left: auto;
 margin-top: 30px;
+transition: background-color 250ms var(--timing-function);
+}
 
+.button-hero:hover{
+  background-color: var(--accent-color-hover);
 }
 
 .title-hero-wrapper{
@@ -430,13 +435,13 @@ margin-right: 10px;
   margin: 0px;
   width: 44px;
   height: 44px;
-  transition: background-color 50ms var(--timing-function), fill 50ms var(--timing-function);
- }
+  border-radius: 50%; 
+  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
+}
 
 .team-icon-link:hover,
 .team-icon-link:focus{
   background-color: var(--accent-color);
-  border-radius: 50%; 
   fill: var(--accent-color-white);
 }
 
@@ -500,6 +505,11 @@ margin-right: 10px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
   }
 
+.product-card-link{
+  display: block;
+  padding-bottom: 20px;
+}
+
 .section-name{
   margin-top: 0px;
   margin-bottom: 4px;
@@ -508,7 +518,6 @@ margin-right: 10px;
 
 .section-customer{
   margin-top: 0px;
-  margin-bottom: 20px;
   text-align: left;
 }
 
@@ -548,6 +557,10 @@ margin-right: 10px;
  }
 
 .product-card:hover .section-paragraph{
+  transform: translateY(0%);
+}
+
+.card > a:focus .product-card > p{
   transform: translateY(0%);
 }
 
